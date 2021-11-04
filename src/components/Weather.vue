@@ -27,6 +27,8 @@
 
 <script>
 import axios from "axios";
+import L from "leaflet";
+import { LMap, LTileLayer, LMarker } from "vue2-leaflet";
 
 export default {
   name: "Weather",
@@ -34,7 +36,7 @@ export default {
     return {
       requeste: "",
       weath: undefined,
-      api_code: `931ff49c2f4a687fff6ba226727a867f`,
+      api_code: ``,
       url_search: "https://api.openweathermap.org/data/2.5/weather?",
     };
   },
@@ -49,6 +51,11 @@ export default {
         });
       this.requeste = "";
     },
+  },
+  components: {
+    LMap,
+    LTileLayer,
+    LMarker,
   },
 };
 </script>
